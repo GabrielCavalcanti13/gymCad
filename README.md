@@ -35,7 +35,7 @@ mailto:apln2@cin.ufpe.br "apln2@cin.ufpe.br")
 [![GitHub](https://img.icons8.com/material/32/000000/github-2.png)](
 https://github.com/aplneto "aplneto")
 
-_**Gabriel Cavalcanti de Melo**
+***Gabriel Cavalcanti de Melo**
 
 [![Facebook](https://img.icons8.com/material/32/000000/facebook.png)](
 https://www.facebook.com/gabriel.cavalcanti.7370 "Gabriel Cavalcanti")
@@ -50,7 +50,8 @@ https://github.com/GabrielCavalcanti13 "GabrielCavalcanti13")
 
 [![Facebook](https://img.icons8.com/material/32/000000/facebook.png)](
 https://www.facebook.com/isacits "Isac Silva")
-![LinkedIn](https://img.icons8.com/material/32/000000/linkedin.png)
+[![LinkedIn](https://img.icons8.com/material/32/000000/linkedin.png)](
+https://www.linkedin.com/in/isac-silva-328881182)
 [![E-mail](https://img.icons8.com/windows/32/000000/gmail.png)](
 mailto:its@cin.ufpe.br "its@cin.ufpe.br")
 [![GitHub](https://img.icons8.com/material/32/000000/github-2.png)](
