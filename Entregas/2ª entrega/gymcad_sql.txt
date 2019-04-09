@@ -1,0 +1,158 @@
+/* gymcad_logico: */
+
+CREATE TABLE Aluno_Avaliacao (
+    Nome VARCHAR,
+    CPF VARCHAR PRIMARY KEY,
+    Rua VARCHAR,
+    Bairro VARCHAR,
+    CEP INT,
+    Cidade VARCHAR,
+    fk_Telefones_Telefones_PK INT,
+    Peso FLOAT,
+    Altura FLOAT,
+    Quadril FLOAT,
+    Braco_E FLOAT,
+    Braco_D FLOAT,
+    Abdomem FLOAT,
+    Panturrilha FLOAT
+);
+
+CREATE TABLE Funcionario (
+    Nome VARCHAR,
+    CPF VARCHAR PRIMARY KEY,
+    fk_Telefones_Telefones_PK INT,
+    Salario FLOAT,
+    CREF VARCHAR,
+    Funcionario_TIPO INT,
+    fk_Funcionario_CPF VARCHAR,
+    fk_Aluno_Avaliacao_CPF VARCHAR
+);
+
+CREATE TABLE Plano (
+    Nome VARCHAR,
+    Valor FLOAT,
+    Codigo INT PRIMARY KEY,
+    Duracao DATE
+);
+
+CREATE TABLE Modalidade (
+    Cronograma DATE,
+    Codigo INT PRIMARY KEY,
+    Nome VARCHAR
+);
+
+CREATE TABLE _Contrata (
+    fk_Aluno_Avaliacao_CPF VARCHAR,
+    fk_Plano_Codigo INT
+);
+
+CREATE TABLE Promocao (
+    Codigo INT PRIMARY KEY,
+    Desconto DECIMAL
+);
+
+CREATE TABLE Telefones (
+    Telefones_PK INT NOT NULL PRIMARY KEY,
+    Telefones INT
+);
+
+CREATE TABLE Telefones (
+    Telefones_PK INT NOT NULL PRIMARY KEY,
+    Telefones INT
+);
+
+CREATE TABLE Pratica (
+    fk_Aluno_Avaliacao_CPF VARCHAR,
+    fk_Modalidade_Codigo INT
+);
+
+CREATE TABLE Possui (
+    fk_Aluno_Avaliacao_CPF VARCHAR,
+    fk_Modalidade_Codigo INT
+);
+
+CREATE TABLE Possui (
+    fk_Modalidade_Codigo INT,
+    fk_Plano_Codigo INT
+);
+
+CREATE TABLE Ministra (
+    fk_Funcionario_CPF VARCHAR,
+    fk_Modalidade_Codigo INT
+);
+
+CREATE TABLE Possui (
+    fk_Promocao_Codigo INT
+);
+ 
+ALTER TABLE Aluno_Avaliacao ADD CONSTRAINT FK_Aluno_Avaliacao_2
+    FOREIGN KEY (fk_Telefones_Telefones_PK)
+    REFERENCES Telefones (Telefones_PK)
+    ON DELETE NO ACTION;
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_2
+    FOREIGN KEY (fk_Telefones_Telefones_PK)
+    REFERENCES Telefones (Telefones_PK)
+    ON DELETE NO ACTION;
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_3
+    FOREIGN KEY (fk_Funcionario_CPF)
+    REFERENCES Funcionario (CPF);
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_4
+    FOREIGN KEY (fk_Aluno_Avaliacao_CPF)
+    REFERENCES Aluno_Avaliacao (CPF)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE _Contrata ADD CONSTRAINT FK__Contrata_1
+    FOREIGN KEY (fk_Aluno_Avaliacao_CPF)
+    REFERENCES Aluno_Avaliacao (CPF);
+ 
+ALTER TABLE _Contrata ADD CONSTRAINT FK__Contrata_2
+    FOREIGN KEY (fk_Plano_Codigo)
+    REFERENCES Plano (Codigo);
+ 
+ALTER TABLE Pratica ADD CONSTRAINT FK_Pratica_1
+    FOREIGN KEY (fk_Aluno_Avaliacao_CPF)
+    REFERENCES Aluno_Avaliacao (CPF)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Pratica ADD CONSTRAINT FK_Pratica_2
+    FOREIGN KEY (fk_Modalidade_Codigo)
+    REFERENCES Modalidade (Codigo)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Possui ADD CONSTRAINT FK_Possui_1
+    FOREIGN KEY (fk_Aluno_Avaliacao_CPF)
+    REFERENCES Aluno_Avaliacao (CPF)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Possui ADD CONSTRAINT FK_Possui_2
+    FOREIGN KEY (fk_Modalidade_Codigo)
+    REFERENCES Modalidade (Codigo)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Possui ADD CONSTRAINT FK_Possui_1
+    FOREIGN KEY (fk_Modalidade_Codigo)
+    REFERENCES Modalidade (Codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Possui ADD CONSTRAINT FK_Possui_2
+    FOREIGN KEY (fk_Plano_Codigo)
+    REFERENCES Plano (Codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Ministra ADD CONSTRAINT FK_Ministra_1
+    FOREIGN KEY (fk_Funcionario_CPF)
+    REFERENCES Funcionario (CPF)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Ministra ADD CONSTRAINT FK_Ministra_2
+    FOREIGN KEY (fk_Modalidade_Codigo)
+    REFERENCES Modalidade (Codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Possui ADD CONSTRAINT FK_Possui_1
+    FOREIGN KEY (fk_Promocao_Codigo)
+    REFERENCES Promocao (Codigo)
+    ON DELETE SET NULL;
