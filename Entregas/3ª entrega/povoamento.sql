@@ -1,58 +1,121 @@
+--INSERINDO FUNCIONARIOS
+
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16210510365‚Äô,'Eduarda Fonseca',1500.00,'Rua Ivo Augusto','Set√∫bal','00394-350','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16110601833','Tiago Bernardo',1500.00,'Rua Pantale√£o Cirne','Candeias','76414-313','Jaboat√£o dos Guararapes');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('12357370197','Maria Eduarda',1100.00,'Rua Floriano Peixoto','Boa Viagem','25458-631','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16700908830','Ruan Vinicius',1500.00,'Rua Geraldo Gomes de Matos','Set√∫bal','15896-795','Recife','16110601833');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16651030157','Guilherme Adelino',1500.00,'Rua Professor Rodolpho Lira','Boa Viagem','81137-911','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16657350157','Anderson Souza',1100.00,'Rua Henrique Domingues','Boa Viagem','75153-611','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16990714022','Tiago Oliveira',1500.00,'Rua Manjeiro','Piedade','45910-321','Jaboat√£o dos Guararapes');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16780327237','Enzo Ribeiro',1500.00,'Rua Francisco Barreto','Imbiribeira','44194-896','Recife');
+INSERT INTO funcionario(cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16411114159','Jesse Henrique',1500.00 ,'Rua Professor Armando de Meira Lins','Pina','92029-895','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16141125061','Adriana Costa',1500.00,'Rua Tacaic√≥','Boa Viagem','58633-303','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16180504046','Matheus Santos',1500.00,'Avenida M√©dici','Set√∫bal','69634-542','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16000616102','Ednaldo Santana',1500.00,'Rua Jos√© Nat√°rio','Pina','92308-326','Recife');
+
+
+
+
+
+
+
+
 --INSERINDO INSTRUTOR
 
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16210510365','16180812194','Eduarda Fonseca',1500.00,'Rua Ivo Augusto','Set˙bal','00394-350','Recife','16000616102');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16110601833','16790130385','Tiago Bernardo',1500.00,'Rua Pantale„o Cirne','Candeias','76414-313','Jaboat„o dos Guararapes','16210510365');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16700908830','16310914499','Ruan Vinicius',1500.00,'Rua Geraldo Gomes de Matos','Set˙bal','15896-795','Recife','16110601833');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16651030157','16800302399','Guilherme Adelino',1500.00,'Rua Professor Rodolpho Lira','Boa Viagem','81137-911','Recife','16700908830');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16990714022','16730227816','Tiago Oliveira',1500.00,'Rua Manjeiro','Piedade','45910-321','Jaboat„o dos Guararapes','16651030157');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16780327237','16150324546','Enzo Ribeiro',1500.00,'Rua Francisco Barreto','Imbiribeira','44194-896','Recife','16990714022');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16411114159','16360516866','Jesse Henrique',1500.00 ,'Rua Professor Armando de Meira Lins','Pina','92029-895','Recife','16780327237');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16141125061','16810813658','Adriana Costa',1500.00,'Rua TacaicÛ','Boa Viagem','58633-303','Recife','16411114159');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16180504046','16350907774','Matheus Santos',1500.00,'Avenida MÈdici','Set˙bal','69634-542','Recife','16141125061');
-INSERT INTO instrutor (cpf,cref,nome,salario,rua,bairro,cep,cidade,cpf_substituto) VALUES ('16000616102','16521107486','Ednaldo Santana',1500.00,'Rua JosÈ Nat·rio','Pina','92308-326','Recife','16180504046');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16210510365','16180812194','16000616102');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16110601833','16790130385','16210510365');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16700908830','16310914499','16110601833');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16651030157','16800302399','16700908830');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16990714022','16730227816','16651030157');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16780327237','16150324546','16990714022');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16411114159','16360516866','16780327237');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16141125061','16810813658','16411114159');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16180504046','16350907774','16141125061');
+INSERT INTO instrutor (cpf,cref,cpf_substituto) VALUES ('16000616102','16521107486','16180504046');
 
 
 
---INSERINDO TELEFONES_INSTRUTOR
+--INSERINDO TELEFONES_funcionario
 
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16210510365',990003305);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16110601833',991158267);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16700908830',989510277);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16651030157',988548930);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16990714022',985724747);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16780327237',990019843);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16411114159',987113915);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16141125061',992474002);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16180504046',986997576);
-INSERT INTO telefones_instrutor (cpf_instrutor,telefone_instrutor) VALUES ('16000616102',987027171);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16210510365',990003305);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16110601833',991158267);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('12357370197',995658398);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16700908830',989510277);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16651030157',988548930);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16657350157',997352898);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16990714022',985724747);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16780327237',990019843);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16411114159',987113915);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16141125061',992474002);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16180504046',986997576);
+INSERT INTO telefones_funcionario(cpf_funcionario,telefone_funcionario) 
+VALUES ('16000616102',987027171);
 
 
 --INSERINDO ALUNOS
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15863539946','Pedro Oliveira','Rua Catal„o','Ipsep','03606-397','Recife','16210510365');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14819572444','Luiz Castro Silva','Estrada do Bartolomeu','Boa Viagem','54555-727','Recife','16110601833');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15167747147','Henrique Santiago','Rua AquinÛpolis','Imbiribeira','43756-829','Recife','16210510365');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15178976902','Clara AngÈlica','Rua Cantora Clara Nunes','Set˙bal','85987-109','Recife','16700908830');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15709453435','Thiago Henrique','Rua TaiÛ','Jord„o','00592-725','Recife','16700908830');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15522905685','Ryan Oliveira Souza','Rua Soldado Graciliano','Boa Viagem','72230-112','Recife','16780327237');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15776788387','Edson Nascimento','Rua Augusto Bamberg de Melo','Set˙bal','90573-413','Recife','16110601833');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14727576094','Juliane Fonseca','Av Armindo Moura','Porta Larga','82904-192','Jaboat„o dos Guararapes','16110601833');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14816176403','Miguel Azevedo Ferreira','Rua Guaraciaba','Boa Viagem','70167-526','Recife','16780327237');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14587657986','Alice Almeida Santos','Rua Arealva','Ibura','55853-712','Recife','16411114159');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14275569478','Gabriela Barbosa Sousa','Rua J˙lio Bernardo','Piedade','32063-223','Jaboat„o dos Guararapes','16700908830');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15241506690','Luana Souza Dias','Rua AmÈrico VirgÌlio','Boa Viagem','82518-725','Recife','16000616102');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14930220453','Evelyn Rocha Araujo','Rua Pinheiro','Boa Viagem','62369-356','Recife','16700908830');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14550767870','Gabriel Carvalho da Rocha','Rua Martins Pena','Candeias','21745-859','Jaboat„o dos Guararapes','16000616102');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14498973213','LuÌs Pereira Melo','Rua Beira Rio','Pina','81967-171','Recife','16000616102');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14566179510','Adriano Fitipaldi','Rua Domingues Ferreira','Pina','79722-496','Recife','16210510365');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15890502230','Thiago Rodrigues Araujo','Rua Uruguai','Boa Viagem','28582-484','Recife','16180504046');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14771854432','Douglas Rodrigues Correia','Rua EsperanÁa','Boa Viagem','65665-751','Recife','16990714022');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15782469445','Fernanda Goncalves','Rua Doutor Benigno Jord„o Vasconcelos','Ipsep','41595-379','Recife','16141125061');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14867457855','Gabrielly Rocha','Rua Macarani','Piedade','60908-356','Jaboat„o dos Guararapes','16180504046');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15564659559','Carlos Lima','Rua Ariado','Ipsep','84545-591','Recife','16990714022');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14900881057','Isabella Almeida Alves','Rua Presidente Bernardes','Boa Viagem','65602-049','Recife','16141125061');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15253583234','Gabriel Fernandes Castro','Rua EsperanÁa','Boa Viagem','65665-751','Recife','16651030157');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('15001037742','Anna Cunha','Rua Rio Preto','Pina','40571-437','Recife','16990714022');
-INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade,cpf_instrutor) VALUES ('14394264257','Ot·vio Ferreira Santos','Rua Formosa','Imbiribeira','02637-947','Recife','16651030157');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15863539946','Pedro Oliveira','Rua Catal√£o','Ipsep','03606-397','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14819572444','Luiz Castro Silva','Estrada do Bartolomeu','Boa Viagem','54555-727','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15167747147','Henrique Santiago','Rua Aquin√≥polis','Imbiribeira','43756-829','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15178976902','Clara Ang√©lica','Rua Cantora Clara Nunes','Set√∫bal','85987-109','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15709453435','Thiago Henrique','Rua Tai√≥','Jord√£o','00592-725','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15522905685','Ryan Oliveira Souza','Rua Soldado Graciliano','Boa Viagem','72230-112','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15776788387','Edson Nascimento','Rua Augusto Bamberg de Melo','Set√∫bal','90573-413','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14727576094','Juliane Fonseca','Av Armindo Moura','Porta Larga','82904-192','Jaboat√£o dos Guararapes');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14816176403','Miguel Azevedo Ferreira','Rua Guaraciaba','Boa Viagem','70167-526','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14587657986','Alice Almeida Santos','Rua Arealva','Ibura','55853-712','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14275569478','Gabriela Barbosa Sousa','Rua J√∫lio Bernardo','Piedade','32063-223','Jaboat√£o dos Guararapes');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15241506690','Luana Souza Dias','Rua Am√©rico Virg√≠lio','Boa Viagem','82518-725','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14930220453','Evelyn Rocha Araujo','Rua Pinheiro','Boa Viagem','62369-356','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14550767870','Gabriel Carvalho da Rocha','Rua Martins Pena','Candeias','21745-859','Jaboat√£o dos Guararapes');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14498973213','Lu√≠s Pereira Melo','Rua Beira Rio','Pina','81967-171','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14566179510','Adriano Fitipaldi','Rua Domingues Ferreira','Pina','79722-496','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15890502230','Thiago Rodrigues Araujo','Rua Uruguai','Boa Viagem','28582-484','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14771854432','Douglas Rodrigues Correia','Rua Esperan√ßa','Boa Viagem','65665-751','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15782469445','Fernanda Goncalves','Rua Doutor Benigno Jord√£o Vasconcelos','Ipsep','41595-379','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14867457855','Gabrielly Rocha','Rua Macarani','Piedade','60908-356','Jaboat√£o dos Guararapes');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15564659559','Carlos Lima','Rua Ariado','Ipsep','84545-591','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14900881057','Isabella Almeida Alves','Rua Presidente Bernardes','Boa Viagem','65602-049','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15253583234','Gabriel Fernandes Castro','Rua Esperan√ßa','Boa Viagem','65665-751','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('15001037742','Anna Cunha','Rua Rio Preto','Pina','40571-437','Recife');
+INSERT INTO aluno (cpf,nome,rua,bairro,cep,cidade) VALUES ('14394264257','Ot√°vio Ferreira Santos','Rua Formosa','Imbiribeira','02637-947','Recife');
+
+--INSERINDO INTRUTOR_ALUNO
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15863539946','16210510365');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14819572444','16110601833');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15167747147','16210510365');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15178976902','16700908830');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15709453435','16700908830');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15522905685','16780327237');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15776788387','16110601833');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14727576094','16110601833');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14816176403','16780327237');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14587657986','16411114159');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14275569478','16700908830');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15241506690','16000616102');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14930220453','16700908830');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14550767870','16000616102');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14498973213','16000616102');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14566179510','16210510365');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15890502230','16180504046');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14771854432','16990714022');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15782469445','16141125061');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14867457855','16180504046');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15564659559','16990714022');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14900881057','16141125061');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15253583234','16651030157');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('15001037742','16990714022');
+INSERT INTO instrutor_aluno (cpf_aluno,cpf_instrutor) VALUES ('14394264257','16651030157');
 
 
 -- INSERINDO TELEFONES_ALUNO
@@ -111,9 +174,9 @@ INSERT INTO avaliacao (cpf,altura,peso,quadril,braco_e,braco_d,abdomem,panturril
 
 --INSERINDO MODALIDADE
 
-INSERT INTO modalidade (codigo, nome, cronograma) VALUES (201, 'AerÛbica','seg,qua,sex');
-INSERT INTO modalidade (codigo, nome, cronograma) VALUES (202, 'MusculaÁ„o','seg,ter,qua,qui,sex,sab');
-INSERT INTO modalidade (codigo, nome, cronograma) VALUES (203, 'Gin·stica','ter,qui,sab');
+INSERT INTO modalidade (codigo, nome, cronograma) VALUES (201, 'Aer√≥bica','seg,qua,sex');
+INSERT INTO modalidade (codigo, nome, cronograma) VALUES (202, 'Muscula√ß√£o','seg,ter,qua,qui,sex,sab');
+INSERT INTO modalidade (codigo, nome, cronograma) VALUES (203, 'Gin√°stica','ter,qui,sab');
 INSERT INTO modalidade (codigo, nome, cronograma) VALUES (204, 'Pilates','ter,qui');
 INSERT INTO modalidade (codigo, nome, cronograma) VALUES (205, 'Cross fit','seg,qua,sex');
 INSERT INTO modalidade (codigo, nome, cronograma) VALUES (206, 'Calistenia','ter,qui');
@@ -259,3 +322,4 @@ INSERT INTO contrato_promocao (cpf_aluno,codigo_plano,codigo_promocao) VALUES ('
 INSERT INTO contrato_promocao (cpf_aluno,codigo_plano,codigo_promocao) VALUES ('14275569478',103,1);
 INSERT INTO contrato_promocao (cpf_aluno,codigo_plano,codigo_promocao) VALUES ('14819572444',104,3);
 INSERT INTO contrato_promocao (cpf_aluno,codigo_plano,codigo_promocao) VALUES ('15253583234',103,2);
+
