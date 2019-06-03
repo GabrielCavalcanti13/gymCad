@@ -15,6 +15,9 @@ DROP TABLE instrutor_modalidade;
 DROP TABLE instrutor;
 DROP TABLE funcionario;
 DROP TABLE modalidade;
+DROP TABLE exercicio;
+DROP TABLE aluno_exercicio;
+DROP TABLE modalidade_exercicio;
 
 
 --CRIANDO TABELAS
@@ -143,5 +146,27 @@ CONSTRAINT contrato_promocao_pk PRIMARY KEY (cpf_aluno, codigo_plano, codigo_pro
 CONSTRAINT cpf_aluno_promocao_fk FOREIGN KEY (cpf_aluno) REFERENCES aluno(cpf),
 CONSTRAINT codigo_plano_contratado_fk FOREIGN KEY (codigo_plano) REFERENCES plano (codigo),
 CONSTRAINT codigo_promocao_contratada_fk FOREIGN KEY (codigo_promocao) REFERENCES promocao (codigo)
+);
+
+CREATE TABLE exercicio (
+codigo INTEGER,
+nome VARCHAR2(20)
+CONSTRAINT codigo_exercicio_pk PRIMARY KEY (codigo)
+);
+
+CREATE TABLE aluno_exercicio (
+cpf_aluno VARCHAR2(11),
+codigo_exercicio INTEGER
+CONSTRAINT cpf_aluno_exercicio_pk PRIMARY KEY (cpf_aluno, cod_exercicio)
+CONSTRAINT cpf_aluno_exercicio_fk FOREIGN KEY (cpf_aluno) REFERENCES aluno (cpf),
+CONSTRAINT codigo_aluno_exercicio_fk FOREIGN KEY (codigo_exercicio) REFERENCES exercicio (codigo)
+);
+
+CREATE TABLE modalidade_exercicio (
+codigo_modalidade INTEGER,
+codigo_exercicio INTEGER,
+CONSTRAINT modalidade_exercicio_pk PRIMARY KEY (codigo_modalidade, codigo_exercicio),
+CONSTRAINT codigo_modalidade_exercicio_fk FOREIGN KEY (codigo_modalidade) REFERENCES modalidade (codigo),
+CONSTRAINT codigo_exercicio_modalidade_fk FOREIGN KEY (codigo_exercicio) REFERENCES exercicio (codigo)
 );
 
