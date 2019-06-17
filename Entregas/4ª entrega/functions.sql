@@ -52,7 +52,7 @@ CREATE OR REPLACE FUNCTION calcular_hora_extra(cpf_instrutor instrutor.cpf%TYPE,
 		FROM instrutor i
 		WHERE i.cpf_substituto = cpf_instrutor;
 		
-		bonus := (horas_extras*valor_extra);
+		bonus := (horas_extras * valor_extra);
 		
 		RETURN bonus;
 		
@@ -79,4 +79,102 @@ CREATE OR REPLACE FUNCTION calcular_bonus_por_aluno(cpf_do_instrutor instrutor.c
 END;
 /
 
--- Funçao que efetua o calculo 
+-- Funçao para calcular a mensalidade a partir do desconto promocional
+CREATE OR REPLACE FUNCTION calcular_mensalidade (codigo_promocao promocao.codigo%TYPE, codigo_plano plano.codigo%TYPE)
+	RETURN NUMBER IS
+		mensalidade NUMBER;
+		reducao promocao.desconto%TYPE;
+	
+	BEGIN
+		SELECT valor
+		INTO mensalidade
+		FROM plano
+		WHERE codigo = codigo_plano;
+		
+		SELECT desconto
+		INTO reducao
+		FROM promocao
+		WHERE codigo = codigo_promocao;
+		
+		mensalidade := (mensalidade * (1-(desconto/100)))
+		
+		RETURN mensalidade;
+END;
+/
+
+-- Funçao para calcular o valor total da mensalidade de um aluno
+CREATE OR REPLACE FUNCTION calcular_mensalidade_aluno (cpf_aluno aluno.cpf%TYPE)
+	RETURN NUMBER IS
+		mensalidade NUMBER;
+		total NUMBER := 0;
+		c_promocao promocao.codigo%TYPE;
+		c_plano plano.codigo%TYPE;
+		CURSOR planos_do_aluno IS
+			SELECT c.codigo_plano
+			FROM contrato c
+			WHERE c.cpf_aluno = cpf_aluno;
+	
+	BEGIN
+		OPEN planos_do_aluno;
+		LOOP
+			FETCH planos_do_aluno INTO c_plano;
+			
+			SELECT valor
+			INTO mensalidade
+			FROM plano
+			WHERE codigo = c_plano;
+			
+			IF EXISTS (
+				SELECT p.codigo_promocao
+				INTO c_promocao
+				FROM contrato_promocao p
+				WHERE p.cpf_aluno = cpf_aluno
+					AND p.codigo_plano = c_plano;) THEN
+/*				
+-- se a consulta acima nao funcionar, apagar a linha do 129 e remover os comentrios da consulta abaixo
+				SELECT p.codigo_promocao
+				INTO c_promocao
+				FROM contrato_promocao p
+				WHERE p.cpf_aluno = cpf_aluno
+				AND p.codigo_plano = c_plano;
+				
+*/
+				mensalidade := calcular_mensalidade(c_promocao, c_plano);
+			END IF;
+			
+			total := total + mensalidade
+			
+		END LOOP;
+		CLOSE planos_do_aluno;
+		
+		RETURN total;
+END;
+/
+
+-- Funçao para calculo do lucro mensal esperado
+CREATE or REPLACE FUNCTION calcular_lucro_mensal ()
+	RETURN NUMBER IS
+		lucro NUMBER := 0;
+		mensalidade plano.valor%TYPE;
+		cpf_atual aluno.cpf%TYPE;
+		
+		-- inicializaçao do cursor
+		CURSOR alunos_cpfs IS
+			SELECT cpf
+			FROM alunos;
+		
+	BEGIN
+		
+		OPEN alunos_cpfs;
+		LOOP
+			FETCH alunos_cpfs INTO cpf_atual;
+				mensalidade := calcular_mensalidade_aluno(cpf_atual);
+				lucro := lucro + mensalidade;
+			EXIT WHEN alunos_cpfs%NOTFOUND;
+		END LOOP;
+		
+		CLOSE alunos_cpfs;
+	
+	RETURN lucro;
+	
+END;
