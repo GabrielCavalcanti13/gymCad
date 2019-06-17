@@ -143,7 +143,7 @@ CREATE OR REPLACE FUNCTION calcular_mensalidade_aluno (cpf_aluno aluno.cpf%TYPE)
 			END IF;
 			
 			total := total + mensalidade
-			
+			EXIT WHEN planos_do_aluno%NOTFOUND;
 		END LOOP;
 		CLOSE planos_do_aluno;
 		
