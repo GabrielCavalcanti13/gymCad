@@ -78,3 +78,5 @@ CREATE OR REPLACE FUNCTION calcular_bonus_por_aluno(cpf_do_instrutor instrutor.c
 	
 END;
 /
+
+-- Funçao que efetua o calculo 
