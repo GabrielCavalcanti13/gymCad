@@ -1,9 +1,9 @@
-﻿--INSERINDO FUNCIONARIOS
+--INSERINDO FUNCIONARIOS
 
-INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16210510365’,'Eduarda Fonseca',1500.00,'Rua Ivo Augusto','Setúbal','00394-350','Recife');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16210510365','Eduarda Fonseca',1500.00,'Rua Ivo Augusto','Setúbal','00394-350','Recife');
 INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16110601833','Tiago Bernardo',1500.00,'Rua Pantaleão Cirne','Candeias','76414-313','Jaboatão dos Guararapes');
 INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('12357370197','Maria Eduarda',1100.00,'Rua Floriano Peixoto','Boa Viagem','25458-631','Recife');
-INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16700908830','Ruan Vinicius',1500.00,'Rua Geraldo Gomes de Matos','Setúbal','15896-795','Recife','16110601833');
+INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16700908830','Ruan Vinicius',1500.00,'Rua Geraldo Gomes de Matos','Setúbal','15896-795','Recife');
 INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16651030157','Guilherme Adelino',1500.00,'Rua Professor Rodolpho Lira','Boa Viagem','81137-911','Recife');
 INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16657350157','Anderson Souza',1100.00,'Rua Henrique Domingues','Boa Viagem','75153-611','Recife');
 INSERT INTO funcionario (cpf,nome,salario,rua,bairro,cep,cidade) VALUES ('16990714022','Tiago Oliveira',1500.00,'Rua Manjeiro','Piedade','45910-321','Jaboatão dos Guararapes');
@@ -325,7 +325,7 @@ INSERT INTO contrato_promocao (cpf_aluno,codigo_plano,codigo_promocao) VALUES ('
 
 -- INSERINDO EXERCICIO
 
-NSERT INTO exercicio (codigo, nome) VALUES (301,'Pular corda');
+INSERT INTO exercicio (codigo, nome) VALUES (301,'Pular corda');
 INSERT INTO exercicio (codigo, nome) VALUES (302,'Jump');
 INSERT INTO exercicio (codigo, nome) VALUES (303,'Stairs');
 INSERT INTO exercicio (codigo, nome) VALUES (304,'Esteira');
@@ -451,7 +451,6 @@ INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15001037742', 34
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15001037742', 346);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15522905685', 339);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15522905685', 333);
-INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15522905685', 339);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15522905685', 341);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14394264257', 335);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14394264257', 337);
@@ -465,7 +464,6 @@ INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15709453435', 33
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15709453435', 337);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15709453435', 336);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15709453435', 342);
-INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14727576094', 306);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14727576094', 311);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14727576094', 314);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15709453435', 306);
@@ -483,7 +481,6 @@ INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14819572444', 31
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14816176403', 311);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14816176403', 313);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14816176403', 315);
-INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15178976902', 308);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15178976902', 321);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('15178976902', 323);
 INSERT INTO aluno_exercicio (cpf_aluno, cod_exercicio) VALUES ('14816176403', 312);
@@ -602,4 +599,3 @@ INSERT INTO modalidade_exercicio (cod_exercicio, cod_modalidade) VALUES (317,206
 INSERT INTO modalidade_exercicio (cod_exercicio, cod_modalidade) VALUES (318,206);
 INSERT INTO modalidade_exercicio (cod_exercicio, cod_modalidade) VALUES (319,206);
 INSERT INTO modalidade_exercicio (cod_exercicio, cod_modalidade) VALUES (320,206);
-
