@@ -150,23 +150,24 @@ CONSTRAINT codigo_promocao_contratada_fk FOREIGN KEY (codigo_promocao) REFERENCE
 
 CREATE TABLE exercicio (
 codigo INTEGER,
-nome VARCHAR2(20)
+nome VARCHAR2(20),
 CONSTRAINT codigo_exercicio_pk PRIMARY KEY (codigo)
 );
 
 CREATE TABLE aluno_exercicio (
 cpf_aluno VARCHAR2(11),
-codigo_exercicio INTEGER
-CONSTRAINT cpf_aluno_exercicio_pk PRIMARY KEY (cpf_aluno, cod_exercicio)
+cod_exercicio INTEGER,
+CONSTRAINT cpf_aluno_exercicio_pk PRIMARY KEY (cpf_aluno, cod_exercicio),
 CONSTRAINT cpf_aluno_exercicio_fk FOREIGN KEY (cpf_aluno) REFERENCES aluno (cpf),
-CONSTRAINT codigo_aluno_exercicio_fk FOREIGN KEY (codigo_exercicio) REFERENCES exercicio (codigo)
+CONSTRAINT codigo_aluno_exercicio_fk FOREIGN KEY (cod_exercicio) REFERENCES exercicio (codigo)
 );
 
 CREATE TABLE modalidade_exercicio (
-codigo_modalidade INTEGER,
-codigo_exercicio INTEGER,
-CONSTRAINT modalidade_exercicio_pk PRIMARY KEY (codigo_modalidade, codigo_exercicio),
-CONSTRAINT codigo_modalidade_exercicio_fk FOREIGN KEY (codigo_modalidade) REFERENCES modalidade (codigo),
-CONSTRAINT codigo_exercicio_modalidade_fk FOREIGN KEY (codigo_exercicio) REFERENCES exercicio (codigo)
+cod_modalidade INTEGER,
+cod_exercicio INTEGER,
+CONSTRAINT modalidade_exercicio_pk PRIMARY KEY (cod_modalidade, cod_exercicio),
+CONSTRAINT codigo_modalidade_exercicio_fk FOREIGN KEY (cod_modalidade) REFERENCES modalidade (codigo),
+CONSTRAINT codigo_exercicio_modalidade_fk FOREIGN KEY (cod_exercicio) REFERENCES exercicio (codigo)
 );
+
 
