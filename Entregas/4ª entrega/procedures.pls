@@ -15,3 +15,35 @@ CREATE OR REPLACE PROCEDURE mostrar_imc_do_aluno (cpf_aluno aluno.cpf%TYPE)
 		
 		DBMS_OUTPUT.put_line(msg);
 	END;
+
+CREATE OR REPLACE PROCEDURE mostrar_risco_rcq_homem (cpf_aluno aluno.cpf%TYPE)
+    IS
+        rcq NUMBER;
+        msg VARCHAR(25);
+    BEGIN
+        rcq := calcular_RCQ(cpf_aluno);
+        msg := CASE
+            WHEN rcq <= 0.83 THEN 'Baixo'
+            WHEN rcq <= 0.88 THEN 'Moderado'
+            WHEN rcq <= 0.94 THEN 'Alto'
+            ELSE 'Muito alto'
+        END;
+        
+        DBMS_OUTPUT.put_line(msg);
+    END;
+
+CREATE OR REPLACE PROCEDURE mostrar_risco_rcq_mulher (cpf_aluno aluno.cpf%TYPE)
+    IS
+        rcq NUMBER;
+        msg VARCHAR(25);
+    BEGIN
+        rcq := calcular_RCQ(cpf_aluno);
+        msg := CASE
+            WHEN rcq <= 0.71 THEN 'Baixo'
+            WHEN rcq <= 0.77 THEN 'Moderado'
+            WHEN rcq <= 0.82 THEN 'Alto'
+            ELSE 'Muito alto'
+        END;
+        
+        DBMS_OUTPUT.put_line(msg);
+    END;
