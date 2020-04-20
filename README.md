@@ -62,11 +62,11 @@ https://github.com/isacits "isacits")
 [![Facebook](https://img.icons8.com/material/32/000000/facebook.png)](
 https://www.facebook.com/pedrodesouzape "Pedro Rodolfo")
 [![LinkedIn](https://img.icons8.com/material/32/000000/linkedin.png)](
-https://www.linkedin.com/in/pedro-rodolfo-de-souza-12988835/ "Pedro Rodolfo de Souza")
+www.linkedin.com/in/prgsouza "Pedro Rodolfo")
 [![E-mail](https://img.icons8.com/windows/32/000000/gmail.png)](
 mailto:rodolfo@cin.ufpe.br "rodolfo@cin.ufpe.br")
 [![GitHub](https://img.icons8.com/material/32/000000/github-2.png)](
-https://github.com/prgs1 "prgs1")
+https://github.com/prgsouza "prgsouza")
 
 
 \* _Gerente do Projeto_
